@@ -1,0 +1,150 @@
+.cards{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.card img {
+  width: 405px;
+  height: 263px;
+}
+
+.card {
+  display: flex;
+  padding: 16px 16px 24px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 12px;
+  background: #FEFEFE;
+  box-shadow: 0px 0px 59.7px 0px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.card p {
+  margin: 0;
+}
+
+.title{
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #E0E0E0;
+  margin-top:128px;
+}
+
+.cardprice{
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  border-radius: 20px;
+}
+
+.cardprice p, .cardprice h1 {
+  margin: 0;
+}
+
+.cardprice-1 {
+  background: linear-gradient(180deg, #FFF2F2 0.16%, #FFF 28.99%);
+}
+
+.cardprice-2 {
+  background: linear-gradient(180deg, #F4F2FF 0%, #FFF 33.78%);
+}
+
+.cardprice-3 {
+  background: linear-gradient(180deg, #F2FFF2 0%, #FFF 33.78%);
+}
+
+.cardjeton{
+  display: flex;
+  padding: 20px 16px 16px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 12px;
+  background: #FEFEFE;
+  box-shadow: 0px 0px 59.7px 0px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.encadrepopulaire{
+  display: flex;
+  padding: 4px 8px;
+  align-items: flex-start;
+  gap: 4px;
+  border-radius: 4px;
+  border: 1px solid var(--2, #233DFF);
+  background: linear-gradient(99deg, rgba(35, 61, 255, 0.20) 0.82%, rgba(225, 122, 255, 0.20) 38.59%, rgba(253, 151, 44, 0.20) 95.25%);
+}
+
+.cardjeton p{
+  margin: 0;
+}
+
+.titlejeton{
+  display: flex;
+  width: 401px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.jeton-number{
+  display: flex;
+  padding: 4px 8px;
+  align-items: flex-start;
+  gap: 4px;
+  border-radius: 4px;
+  border: 1px solid var(--2, #233DFF);
+  background: linear-gradient(99deg, rgba(35, 61, 255, 0.20) 0.82%, rgba(225, 122, 255, 0.20) 38.59%, rgba(253, 151, 44, 0.20) 95.25%);
+}
+
+.pricecomponent{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.jetoncomponent p{
+  margin: 0;
+}
+
+.pricecomponents{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 20px;
+}
+
+.offre{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.populaire{
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.prix {
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.cardgain {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 12px;
+  background: #FEFEFE;
+  box-shadow: 0px 0px 59.7px 0px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+}

@@ -3,145 +3,219 @@
     <head>
         <meta charset="utf-8">
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/button.css" rel="stylesheet">
         <link href="css/nav.css" rel="stylesheet">
+        <link href="css/card.css" rel="stylesheet">
         <link href="css/section.css" rel="stylesheet">
-        <script src="javascript/calcul.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/stimulus/dist/stimulus.umd.js"></script>
     </head>
 
     <body>
-      <nav>
-        <ul>
-          <li><a href="#Dashboard">Dashboard</a></li>
-          <li><a href="#Fonctionnement">Fonctionnement</a></li>
-          <li><a href="#Prix">Prix</a></li>
-          <li><a href="#Contact">Contact</a></li>
-          <li><a href="#contact">Demo</a></li>
-          <li><a href="#contact">Essayer gratuitement</a></li>
-        </ul>
-      </nav>
+      <div class="content">
+        <nav>
+          <div class="bar-nav">
+            <div class="logo"><img src="public/images/logo.svg" alt="Logo Eazia" id="logo"></div>
+            <div class="liste">
+              <ul>
+                <li><a href="#Dashboard">Dashboard</a></li>
+                <li><a href="#Fonctionnement">Fonctionnement</a></li>
+                <li><a href="#Prix">Prix</a></li>
+                <li><a href="#Contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="button-nav">
+              <li class="button-demo"><a href="#contact">Demo</a></li>
+              <li class="main-button"><a href="#contact">Essayer gratuitement</a></li>
+            </div>
+          </div>
+        </nav>
 
-      <div>
-        <h1>ChatGPT = Canva + Hootsuite =</h1>
-        <img src="public/images/eazia.svg" alt="Logo Eazia" id="logo">
-        <h2> Générateur de contenus pour les réseaux sociaux par l'IA</h2>
-        <button>Tester gratuitement</button>
+        <section id="Dashboard">
+          <div class="section-1">
+              <div class="titreintro">
+                <div class="phraseintro">
+                  <h1>ChatGPT = Canva + Hootsuite =</h1>
+                </div>
+              <img src="public/images/eazia.svg" alt="Logo Eazia" id="logo">
+            </div>
+            <div class="textintro">
+              <h2> Générateur de contenus pour les réseaux sociaux par l'IA</h2>
+              <button class="main-button">Tester gratuitement</button>
+            </div>
+            <div class="dashboard">
+              <img src="public/images/eazia brouillons.png" alt="1">
+            </div>
+        </section>
+
+        <section id="Fonctionnement">
+          <div class="section">
+            <div class="title">
+              <img src="public/images/book-open.svg" alt="book">
+              <p>Comment ça marche</p>
+            </div>
+            <h1>Générez du contenu Instagram captivant en quelques instants</h1>
+
+            <!-- 3 cards -->
+            <div class="cards">
+              <div class="card">
+                <img src="public/images/inscription-1.png" alt="1">
+                <p>Créer votre compte en 15 secondes</p>
+              </div>
+
+              <div class="card">
+                <img src="public/images/inscription-2.png" alt="1">
+                <p>Génerer du contenu personalisé</p>
+              </div>
+
+              <div class="card">
+                <img src="public/images/eazia exemple.png" alt="1">
+                <p>Publier ou programmer en 1 clic !</p>
+              </div>
+            </div>
+            <div class="title">
+              <img src="public/images/file.svg" alt="file">
+              <p>Création illimitée</p>
+            </div>
+            <h1>Optimisez votre stratégie Instagram avec EAZIA</h1>
+            <!-- images des posts insta -->
+          </div>
+
+        </section>
+
+        <section id="Prix">
+          <div class="section">
+            <div class="title">
+              <img src="public/images/file.svg" alt="file">
+              <p>Nos Offres</p>
+            </div>
+            <h1>3 outils pour le prix d’1</h1>
+            <p>Automatisez enfin votre communication par l'IA</p>
+
+            <!-- onglets bootstrap -->
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Mensuel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Trimestriel -10%</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Annuel -30%</a>
+              </li>
+            </ul>
+            <!--  -->
+
+            <div class="cards">
+              <div class="cardprice cardprice-1">
+                <div class="offre">
+                  <h3>Freemium</h3>
+                  <p class="price"><span class="prix">0€</span>/mois</p>
+                </div>
+                <p class="main-button">Période d'essai</p>
+                <div class="pricecomponents">
+                  <div class="pricecomponent"><img src="public/images/jeton.svg" alt="Icône jeton"> <p>10 Jetons disponibles pour créer des posts*</p></div>
+                  <div class="pricecomponent"><img src="public/images/folder.svg" alt="Icône dossier"> <p>Entre 1 et 5 posts/mois</p></div>
+                  <div class="pricecomponent"><img src="public/images/calendar.svg" alt="Icône calendrier"> <p>Programmation</p></div>
+                  <div class="pricecomponent"><img src="public/images/Chat.svg" alt="Icône chat"> <p>Pas de SAV</p></div>
+                </div>
+                <p style="color: #B0B0B0; font-size: 14px;">"Généré par Eazia" dans la description</p>
+              </div>
+
+              <div class="cardprice cardprice-2">
+                <div class="offre">
+                  <h3>BEGINNER</h3>
+                  <p class="price"><span class="prix">19€</span>/mois</p>
+                </div>
+                <p class="main-button">Essai</p>
+                <div class="pricecomponents">
+                  <div class="pricecomponent"><img src="public/images/jeton.svg" alt="Icône jeton"> <p>30 Jetons disponibles pour créer des posts*</p></div>
+                  <div class="pricecomponent"><img src="public/images/folder.svg" alt="Icône dossier"> <p>Entre 3 et 4 posts/mois</p></div>
+                  <div class="pricecomponent"><img src="public/images/calendar.svg" alt="Icône calendrier"> <p>Programmation</p></div>
+                  <div class="pricecomponent"><img src="public/images/Chat.svg" alt="Icône chat"> <p>SAV 5j/7 par mail (réponse en 48h max)</p></div>
+                  <div class="pricecomponent"><img src="public/images/globe.svg" alt="Icône globe"> <p>Accès à l'agence QA sur devis</p></div>
+                </div>
+              </div>
+
+              <div class="cardprice cardprice-3">
+                <div class="offre">
+                  <div class="populaire"><h3>PREMIUM</h3> <p class="encadrepopulaire">Populaire</p></div>
+                  <p class="price"><span class="prix">59€</span>/mois</p>
+                </div>
+                <p class="main-button">Essai</p>
+                <div class="pricecomponents">
+                  <div class="pricecomponent"><img src="public/images/jeton.svg" alt="Icône jeton"> <p>100 Jetons disponibles pour créer des posts*</p></div>
+                  <div class="pricecomponent"><img src="public/images/folder.svg" alt="Icône dossier"> <p>Entre 6 et 24 posts/mois</p></div>
+                  <div class="pricecomponent"><img src="public/images/calendar.svg" alt="Icône calendrier"> <p>Programmation</p></div>
+                  <div class="pricecomponent"><img src="public/images/Chat.svg" alt="Icône chat"> <p>SAV 5j/7 (téléphone en 24h max)</p></div>
+                  <div class="pricecomponent"><img src="public/images/globe.svg" alt="Icône globe"> <p>Accès à l'agence QA sur devis</p></div>
+                </div>
+              </div>
+            </div>
+            <p style="color: #B0B0B0; font-size: 14px;" class="asterisque">* 1 image = 1 jeton / 1 description = 1 jeton</p>
+
+
+            <div class="title">
+              <img src="public/images/jeton-black.svg" alt="jeton">
+              <p>Jetons</p>
+            </div>
+            <h1>Gagnez des jetons facilement</h1>
+            <p>Accumulez des jetons en effectuant diverses actions</p>
+            <div class="cards">
+              <div class="cardjeton">
+                <div class="titlejeton">
+                  <p>S'abonner aux réseaux sociaux</p>
+                  <p class="jeton-number">5 jetons</p>
+                </div>
+                <img src="public/images/inscription-1.png" alt="1">
+              </div>
+
+              <div class="cardjeton">
+                <div class="titlejeton">
+                  <p>S'abonner à notre newsletter</p>
+                  <p class="jeton-number">10 jetons</p>
+                </div>
+                <img src="public/images/inscription-1.png" alt="1">
+              </div>
+
+              <div class="cardjeton">
+                <div class="titlejeton">
+                  <p>Affilier une personne</p>
+                  <p class="jeton-number">60 jetons</p>
+                </div>
+                <img src="public/images/inscription-1.png" alt="1">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="Calcul">
+          <div class="section">
+            <div class="title">
+              <img src="public/images/calculate.svg" alt="calculate">
+              <p>Calculez vos gains</p>
+            </div>
+            <h1>Allez plus vite tout en payant bien moins cher !</h1>
+            <p>La seule solution française pour créer du contenu Instagram en masse tout en économisant</p>
+
+            <div class="cardgain">
+              <h2>Le nombre de posts/mois que vous voulez</h2>
+              <input type="number" name="posts" id="posts" min="1" max="100">
+              <h2>Le prix par une agence</h2>
+              <!-- calcul js -->
+              <h2>Le prix avec Eazia</h2>
+              <!-- calcul js -->
+              <h2>Combien vous gagnez grâce à Eazia</h2>
+              <!-- calcul js -->
+            </div>
+          </div>
+        </section>
+
       </div>
-
-      <section id="Dashboard">
-        <img src="public/images/eazia brouillons.png" alt="1">
-      </section>
-
-      <section id="Fonctionnement">
-
-        <img src="public/images/book-open.svg" alt="1"><h3>Comment ça marche</h3>
-        <h1>Générez du contenu Instagram captivant en quelques instants</h1>
-        <!-- 3 cards -->
-        <div class="card">
-          <img src="public/images/inscription-1.png" alt="1">
-          <h2>Créer votre compte en 15 secondes</h2>
-        </div>
-
-        <div class="card">
-          <img src="public/images/inscription-2.png" alt="1">
-          <h2>Génerer du contenu personalisé</h2>
-        </div>
-
-        <div class="card">
-          <img src="public/images/eazia exemple.png" alt="1">
-          <h2>Publier ou programmer en 1 clic !</h2>
-        </div>
-
-        <img src="public/images/file.svg" alt="1"><h3>Création illimitée</h3>
-        <h1>Optimisez votre stratégie Instagram avec EAZIA</h1>
-        <!-- images des posts insta -->
-
-
-      </section>
-
-      <section id="Prix">
-        <img scr="public/images/file.svg"> <h3>Nos Offres</h3>
-        <h1>3 outils pour le prix d’1</h1>
-        <p>Automatisez enfin votre communication par l'IA</p>
-
-        <!-- onglets bootstrap ? -->
-
-        <div class="cardprice">
-          <h1>Freemium</h1>
-          <p>0€/mois</p>
-          <button>Période d'essai</button>
-          <img src="public/images/jeton.svg" alt="Icône jeton"> <p>10 Jetons disponibles pour créer des posts*</p>
-          <img src="public/images/folder.svg" alt="Icône dossier"> <p>Entre 1 et 5 posts/mois</p>
-          <img src="public/images/calendar.svg" alt="Icône calendrier"> <p>Programmation</p>
-          <img src="public/images/Chat.svg" alt="Icône chat"> <p>Pas de SAV</p>
-          <p>"Généré par Eazia" dans la description</p>
-        </div>
-
-        <div class="cardprice">
-          <h1>BEGINNER</h1>
-          <p>19€/mois</p>
-          <button>Essai</button>
-          <img src="public/images/jeton.svg" alt="Icône jeton"> <p>30 Jetons disponibles pour créer des posts*</p>
-          <img src="public/images/folder.svg" alt="Icône dossier"> <p>Entre 3 et 4 posts/mois</p>
-          <img src="public/images/calendar.svg" alt="Icône calendrier"> <p>Programmation</p>
-          <img src="public/images/Chat.svg" alt="Icône chat"> <p>SAV 5j/7 par mail (réponse en 48h max)</p>
-          <img src="public/images/globe.svg" alt="Icône globe"> <p>Accès à l'agence QA sur devis</p>
-        </div>
-
-        <div class="cardprice">
-          <h1>PREMIUM</h1> Populaire
-          <p>59€/mois</p>
-          <button>Essai</button>
-          <img src="public/images/jeton.svg" alt="Icône jeton"> <p>100 Jetons disponibles pour créer des posts*</p>
-          <img src="public/images/folder.svg" alt="Icône dossier"> <p>Entre 6 et 24 posts/mois</p>
-          <img src="public/images/calendar.svg" alt="Icône calendrier"> <p>Programmation</p>
-          <img src="public/images/Chat.svg" alt="Icône chat"> <p>SAV 5j/7 (téléphone en 24h max)</p>
-          <img src="public/images/globe.svg" alt="Icône globe"> <p>Accès à l'agence QA sur devis</p>
-
-        </div>
-        <p>* 1 image = 1 jeton / 1 description = 1 jeton</p>
-
-        <img scr="public/images/jeton-black.svg"> <h3>Jetons</h3>
-        <h1>Gagnez des jetons facilement</h1>
-        <p>Accumulez des jetons en effectuant diverses actions</p>
-
-        <div class="cardjeton">
-          <h2>S'abonner aux réseaux sociaux</h2>
-          <p>5 jetons</p>
-          <img src="public/images/inscription-1.png" alt="1">
-        </div>
-
-        <div class="cardjeton">
-          <h2>S'abonner à notre newsletter</h2>
-          <p>10 jetons</p>
-          <img src="public/images/inscription-1.png" alt="1">
-        </div>
-
-        <div class="cardjeton">
-          <h2>Affilier une personne</h2>
-          <p>60 jetons</p>
-          <img src="public/images/inscription-1.png" alt="1">
-        </div>
-
-      </section>
-
-      <section>
-        <img scr="public/images/calculate.svg"> <h3>Calculez vos gains</h3>
-        <h1>Allez plus vite tout en payant bien moins cher !</h1>
-        <p>La seule solution française pour créer du contenu Instagram en masse tout en économisant</p>
-
-        <div class="cardgain">
-          <h2>Le nombre de posts/mois que vous voulez</h2>
-          <input type="number" name="posts" id="posts" min="1" max="100">
-          <h2>Le prix par une agence</h2>
-          <!-- calcul js -->
-          <h2>Le prix avec Eazia</h2>
-          <!-- calcul js -->
-          <h2>Combien vous gagnez grâce à Eazia</h2>
-          <!-- calcul js -->
-        </div>
-      </section>
-
-
     </body>
 
   </html>

@@ -1,0 +1,21 @@
+.main-button{
+  display: flex;
+  padding: 8px 12px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+
+  background: linear-gradient(99deg, #233DFF 0.82%, #E17AFF 38.59%, #FD972C 95.25%);
+  box-shadow: 0px 4px 10.9px 0px rgba(255, 255, 255, 0.40) inset;
+}
+
+.button-demo{
+  display: flex;
+  padding: 8px 12px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #233DFF;
+  background: linear-gradient(99deg, rgba(35, 61, 255, 0.12) 0.82%, rgba(225, 122, 255, 0.12) 38.59%, rgba(253, 151, 44, 0.12) 95.25%);
+  box-shadow: 0px 4px 10.9px 0px rgba(255, 255, 255, 0.40) inset;
+}
