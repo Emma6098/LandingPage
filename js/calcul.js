@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     connect() {
       console.log("Connecté !");
+      this.postsTarget.value = '';
     }
 
     calculate() {
@@ -26,9 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const prixEazia = nbPosts <= 15 ? 19 : 59;
         const gainEazia = prixAgence - prixEazia;
 
-        this.prixAgenceTarget.textContent = prixAgence + "€";
-        this.prixEaziaTarget.textContent = prixEazia + "€";
-        this.gainEaziaTarget.textContent = gainEazia + "€";
+        this.prixAgenceTarget.textContent = prixAgence + " €";
+        this.prixEaziaTarget.textContent = prixEazia + " €";
+        this.gainEaziaTarget.textContent = gainEazia + " €";
       }
     }
   });

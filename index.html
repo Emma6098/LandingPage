@@ -8,6 +8,7 @@
         <link href="css/gain.css" rel="stylesheet">
         <link href="css/card.css" rel="stylesheet">
         <link href="css/section.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -36,16 +37,16 @@
           </div>
         </nav>
 
-        <section>
+        <section id ="intro">
           <div class="section-1">
               <div class="titreintro">
                 <div class="phraseintro">
                   <h1>ChatGPT = Canva + Hootsuite =</h1>
                 </div>
-              <div class ="encadrelogo">
-                <img src="public/images/eazia.svg" alt="Logo Eazia" id="logo">
+                <div class ="encadrelogo">
+                  <img src="public/images/eazia.svg" alt="Logo Eazia" id="logo">
+                </div>
               </div>
-            </div>
             <div class="textintro">
               <h2> Générateur de contenus pour les réseaux sociaux par l'IA</h2>
               <p class="intro-button">Tester gratuitement</p>
@@ -53,6 +54,7 @@
             <div class="dashboard" id="Dashboard">
               <img src="public/images/dashboard.png" alt="1">
             </div>
+          </div>
         </section>
 
         <section id="Fonctionnement">
@@ -104,10 +106,11 @@
 
                   <!-- onglets prix -->
                   <div class="button-prix">
-                    <p class="btn-prix" data-action="click->offre#convertToMensuel">Mensuel</p>
+                    <p class="btn-prix mensuel active" data-action="click->offre#convertToMensuel">Mensuel</p>
                     <p class="btn-prix trimestriel" data-action="click->offre#convertToTrimester">Trimestriel -10%</p>
-                    <p class="btn-prix" data-action="click->offre#convertToAnnuel">Annuel -30%</p>
+                    <p class="btn-prix annuel" data-action="click->offre#convertToAnnuel">Annuel -30%</p>
                   </div>
+                  <h1 class="lancement encadre">Offre de lancement !</h1>
                 </div>
                 <!--  -->
 
@@ -117,7 +120,7 @@
                       <h3>Freemium</h3>
                       <p class="price" data-offre-target="pricemensuf pricetrimf priceanuf"><span class="prix">0€</span><span>/mois</span></p>
                     </div>
-                    <p class="price-button">Période d'essai</p>
+                    <p class="price-button">Choisir</p>
                     <div class="pricecomponents">
                       <div class="pricecomponent"><img src="public/images/jeton.svg" alt="Icône jeton"> <p>10 Jetons disponibles pour créer des posts*</p></div>
                       <div class="pricecomponent"><img src="public/images/folder.svg" alt="Icône dossier"> <p>Entre 1 et 5 posts/mois</p></div>
@@ -130,9 +133,9 @@
                   <div class="cardprice cardprice-2">
                     <div class="offre">
                       <div class="populaire"><h3>BEGINNER</h3> <div class="encadrepopulaire"><p>Populaire</p></div></div>
-                      <p class="price" data-offre-target="pricetrimb priceanub pricemensub"><span class="prix">19€</span><span>/mois</span></p>
+                      <p class="price" data-offre-target="pricetrimb priceanub pricemensub"><span class="prix prixbarre">19€</span><span>/mois</span> <i class="fa-solid fa-arrow-right"></i><span class="lancement prix">19€</span><span class="lancement"> pour 6 mois !</span></p>
                     </div>
-                    <p class="price-button">Essai</p>
+                    <p class="price-button">Choisir</p>
                     <div class="pricecomponents">
                       <div class="pricecomponent"><img src="public/images/jeton.svg" alt="Icône jeton"> <p>30 Jetons disponibles pour créer des posts*</p></div>
                       <div class="pricecomponent"><img src="public/images/folder.svg" alt="Icône dossier"> <p>Entre 3 et 4 posts/mois</p></div>
@@ -147,7 +150,7 @@
                       <h3>PREMIUM</h3>
                       <p class="price" data-offre-target="pricetrimp priceanup pricemensup" ><span class="prix">59€</span><span>/mois</span></p>
                     </div>
-                    <p class="price-button">Essai</p>
+                    <p class="price-button">Choisir</p>
                     <div class="pricecomponents">
                       <div class="pricecomponent"><img src="public/images/jeton.svg" alt="Icône jeton"> <p>100 Jetons disponibles pour créer des posts*</p></div>
                       <div class="pricecomponent"><img src="public/images/folder.svg" alt="Icône dossier"> <p>Entre 6 et 24 posts/mois</p></div>
@@ -191,8 +194,13 @@
                 </div>
                 <img src="public/images/inscription-1.png" alt="1">
               </div>
+            </div> -->
+            <div class="card-lancement">
+              <h1>&#127881 <span class="lancement">Offre de lancement !</span> &#127881</h1>
+              <p>6 mois pour le prix d'1</p>
+              <p><span class="prix">19€</span> pour <span class="prix">6 mois</span>  d'abonnement BEGINNER</p>
             </div>
-          </div> -->
+          </div>
         </section>
 
         <section id="Calcul">
@@ -212,16 +220,16 @@
               <div class="prixae">
                 <div class="prixagence">
                   <p>Le prix par une agence</p>
-                  <div class="calculagence" data-calcul-target="prixAgence">€ </div>
+                  <div class="calculagence" data-calcul-target="prixAgence">€</div>
                 </div>
                 <div class="prixeazia">
                   <p>Le prix avec Eazia</p>
-                  <div class="calculeazia" data-calcul-target="prixEazia">€ </div>
+                  <div class="calculeazia" data-calcul-target="prixEazia">€</div>
                 </div>
               </div>
               <div class="total">
                 <p>Combien vous gagnez grâce à Eazia</p>
-                <div class="calcultotal" data-calcul-target="gainEazia">€ </div>
+                <div class="calcultotal" data-calcul-target="gainEazia"><div class="textarc">€</div></div>
               </div>
             </div>
           </div>

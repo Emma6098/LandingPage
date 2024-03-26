@@ -37,7 +37,7 @@
 
 .price-button{
   display: flex;
-  width: 363px;
+  width: 100%;
   padding: 12px 48px;
   flex-direction: column;
   align-items: center;
@@ -50,6 +50,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  box-sizing: border-box;
 }
 
 .button-prix{
@@ -84,5 +85,13 @@
 
 
 .trimestriel.active {
+  background-color: #faf8f8;
+}
+
+.mensuel.active {
+  background-color: #faf8f8;
+}
+
+.annuel.active{
   background-color: #faf8f8;
 }

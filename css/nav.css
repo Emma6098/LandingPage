@@ -4,6 +4,7 @@ nav {
   backdrop-filter: blur(6px);
   width: 100%;
   height: auto;
+  position: absolute;
 }
 
 nav ul {
