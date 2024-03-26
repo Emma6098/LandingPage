@@ -3,7 +3,7 @@ nav {
   background: rgba(255, 255, 255, 0.20);
   backdrop-filter: blur(6px);
   width: 100%;
-  height: 80px;
+  height: auto;
 }
 
 nav ul {
@@ -27,4 +27,37 @@ nav ul {
   align-items: center;
   list-style-type: none;
   gap: 12px;
+}
+
+.liste a {
+  text-decoration: none;
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.main-button a {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.button-demo a {
+  background: var(--2, linear-gradient(99deg, #233DFF 0.82%, #E17AFF 38.59%, #FD972C 95.25%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
 }

@@ -1,20 +1,35 @@
-function calculerPrixAgence(nombreDePosts, prixParPost) {
-  return nombreDePosts * prixParPost;
-}
+document.addEventListener("DOMContentLoaded", function() {
+  const application = Stimulus.Application.start();
 
-// Fonction pour calculer le prix avec Eazia
-function calculerPrixEazia(nombreDePosts) {
-  const prixFixeEazia = 59; // Prix fixe avec Eazia
-  if (nombreDePosts > 100) {
-      // Si le nombre de posts dépasse 100, il y a un tarif différent
-      // Vous pouvez ajuster cette condition selon vos besoins
-      return prixFixeEazia * nombreDePosts;
-  } else {
-      return prixFixeEazia;
-  }
-}
+  application.register("calcul", class extends Stimulus.Controller {
+    static get targets() {
+      return ["posts", "prixAgence", "prixEazia", "gainEazia"];
+    }
 
-// Fonction pour calculer les gains réalisés grâce à Eazia
-function calculerGains(prixAgence, prixEazia) {
-  return prixAgence - prixEazia;
-}
+    connect() {
+      console.log("Connecté !");
+    }
+
+    calculate() {
+      const inputValue = this.postsTarget.value.trim(); // trim() pour supprimer les espaces en trop
+
+      // Vérifier si l'input est vide ou non numérique
+      if (inputValue === '' || isNaN(inputValue)) {
+        // Si l'input est vide ou non numérique, les cases restent vides
+        this.prixAgenceTarget.textContent = "€";
+        this.prixEaziaTarget.textContent = "€";
+        this.gainEaziaTarget.textContent = "€";
+      } else {
+        // Si l'input est valide, faire les calculs
+        const nbPosts = parseInt(inputValue);
+        const prixAgence = nbPosts * 60;
+        const prixEazia = nbPosts <= 15 ? 19 : 59;
+        const gainEazia = prixAgence - prixEazia;
+
+        this.prixAgenceTarget.textContent = prixAgence + "€";
+        this.prixEaziaTarget.textContent = prixEazia + "€";
+        this.gainEaziaTarget.textContent = gainEazia + "€";
+      }
+    }
+  });
+});
