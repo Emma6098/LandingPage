@@ -7,9 +7,10 @@ nav {
   position: absolute;
 }
 
-nav ul {
+.liste ul {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 40px;
   list-style-type: none;
   text-decoration: none;

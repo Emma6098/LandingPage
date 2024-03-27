@@ -61,3 +61,10 @@
   font-weight: 400;
   line-height: 20px;
 }
+
+@media screen and (max-width:550px) {
+  .prixae{
+    flex-direction: column;
+    gap: 20px;
+  }
+}
